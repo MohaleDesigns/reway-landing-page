@@ -16,7 +16,8 @@ export default {
       colors: {
         primary: "#00A2FF",
         lightGrey: "#EAEAEA",
-        garkGrey: "#828282",
+        darkGrey: "#828282",
+        superDarkGrey: "#4A4A4A",
       },
       backgroundImage: {
         advertBg: "url('../src/assets/images/advert.png')",

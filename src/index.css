@@ -3,3 +3,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hover-effect {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-hover,
+.overlay,
+.arrows {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #00a2ff;
+  cursor: pointer;
+}
+
+.image-hover:hover {
+  position: relative;
+  height: 100px;
+}
+
+.image-hover:hover {
+  border: 4px solid #00a2ff;
+  cursor: pointer;
+}
+
+/* overlay */
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-hover:hover .overlay {
+  display: block;
+}
+
+/* arrows */
+.arrows:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: "10px";
+  border-radius: 100%;
+  color: #ffffff !important;
+  cursor: pointer;
+}

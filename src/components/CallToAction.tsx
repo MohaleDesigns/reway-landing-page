@@ -1,10 +1,29 @@
 import React from "react";
+import "../index.css";
 
 function CallToAction() {
   return (
-    <div>
-      <div className="container mb-2 mx-auto flex align-middle justify-center bg-slate-200 rounded-md p-5">
-        <p className=" text-primary font-Suez">CTA</p>
+    <div
+      style={{
+        backgroundImage: "url('../src/assets/images/cta.png')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+      className="mb-5 mx-auto flex items-center justify-between p-5"
+    >
+      <div>
+        <h4 className="text-white font-Suez uppercase text-2xl">
+          Summer sale!
+        </h4>
+        <h4 className="text-white font-Suez uppercase text-xl">
+          Up to 50% off!
+        </h4>
+      </div>
+
+      <div>
+        <button className="font-Suez border-[3px] px-5 py-2 border-white rounded text-sm text-white uppercase hover-effect">
+          Shop Now
+        </button>
       </div>
     </div>
   );
