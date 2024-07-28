@@ -19,10 +19,6 @@ export default {
         darkGrey: "#828282",
         superDarkGrey: "#4A4A4A",
       },
-      backgroundImage: {
-        advertBg: "url('../src/assets/images/advert.png')",
-        ctaBg: "url('../src/assets/images/cta.png')",
-      },
       fontFamily: {
         Suez: ["Suez One", "serif"],
         PTSans: ["PT Sans", "sans-serif"],
