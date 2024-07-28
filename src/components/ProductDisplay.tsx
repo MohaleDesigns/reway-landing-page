@@ -3,7 +3,7 @@ import { PiStorefront } from "react-icons/pi";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { GoTag } from "react-icons/go";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
-import bigImageOne from "../assets/images/products/big-product-1.png";
+import { IoMdArrowDropdown } from "react-icons/io";
 import smallImageTwo from "../assets/images/products/big-product-2.png";
 import smallImageThree from "../assets/images/products/big-product-3.png";
 import smallImageFour from "../assets/images/products/big-product-4.png";
@@ -27,9 +27,9 @@ function ProductDisplay() {
       </div>
 
       {/* two columns */}
-      <div className="grid grid-cols-2 gap-2">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-2">
         {/* photo gallery */}
-        <div>
+        <div className="mb-5 lg:mb-0">
           {/* big photo */}
           <div className="h-[600px] relative">
             {/* tag  */}
@@ -101,7 +101,7 @@ function ProductDisplay() {
           </div>
         </div>
         {/* product details & filter/add cart */}
-        <div className="pl-10">
+        <div className="lg:pl-10">
           {/* product details */}
           <div className="border-4 border-primary cursor-pointer p-4 mb-5">
             <h4 className="text-black font-Suez uppercase text-xl">
@@ -171,34 +171,66 @@ function ProductDisplay() {
           </div>
           {/* filter/add cart */}
           <div className="p-8 bg-lightGrey">
-            <div className="mb-4">
+            {/* Size */}
+            <div className="relative mb-4">
               <label
-                className="block text-darkGrey text-base font-bold mb-2 uppercase"
-                htmlFor="rangeInput"
+                className="block text-darkGrey/50 text-base font-bold mb-2 uppercase"
+                htmlFor="quantitySelect"
               >
                 Size
               </label>
-              <input
-                id="rangeInput"
-                type="range"
-                className="border-2 border-gray-300 rounded-md p-2 w-full"
-              />
+              <div className="flex items-center relative">
+                <select
+                  id="size"
+                  className="border-2 border-darkGrey/50 rounded-md p-2 w-full font-bold text-darkGrey/50 appearance-none"
+                >
+                  <option value="">SELECT SIZE</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <IoMdArrowDropdown className="absolute right-2 text-darkGrey/50  pointer-events-none text-2xl" />
+              </div>
             </div>
-            <div className="mb-4">
+
+            {/* Quantity */}
+            <div className="relative mb-4">
               <label
-                className="block text-darkGrey text-base font-bold mb-2 uppercase"
-                htmlFor="rangeInput"
+                className="block text-darkGrey/50 text-base font-bold mb-2 uppercase"
+                htmlFor="quantitySelect"
               >
                 Quantity
               </label>
-              <input
-                id="rangeInput"
-                type="range"
-                className="border-2 border-gray-300 rounded-md p-2 w-full"
-              />
+              <div className="flex items-center relative">
+                <select
+                  id="quantitySelect"
+                  className="border-2 border-darkGrey/50 rounded-md p-2 w-full font-bold text-darkGrey/50 appearance-none"
+                >
+                  <option value="">SELECT QUANTITY</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <IoMdArrowDropdown className="absolute right-2 text-darkGrey/50 pointer-events-none text-2xl" />
+              </div>
             </div>
+
             <div className="flex">
-              <button className="font-Suez flex items-center justify-center w-full gap-2 px-8 py-3 text-[30px] text-white uppercase hover-effect hover:text-white bg-primary mx-auto">
+              <button className="font-Suez flex items-center justify-center w-full gap-2 px-8 py-3 text-[25px] md:text-[30px] text-white uppercase hover-effect hover:text-white bg-primary mx-auto">
                 <HiOutlineShoppingCart
                   style={{ color: "#ffffff", fontSize: "30px" }}
                 />{" "}

@@ -6,7 +6,7 @@ import "../index.css";
 function Footer() {
   return (
     <div className="bg-superDarkGrey ">
-      <div className="container mx-auto flex items-center justify-between rounded-md px-5 py-16">
+      <div className="container mx-auto flex-col gap-5 md:flex-row flex items-start justify-between rounded-md px-5 py-16">
         <div className="flex items-center gap-5 justify-between">
           <div>
             <h4 className="text-white font-Suez pl-2 text-xl">Account</h4>

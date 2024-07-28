@@ -62,8 +62,8 @@ function App() {
       title: "Jean Hiker Boots",
       store: "Superbalist",
       price: 600,
-      discount: "-40% Off",
-      inventory: "Low stock",
+      discount: "",
+      inventory: "",
     },
   ];
 
@@ -71,30 +71,32 @@ function App() {
     <>
       <Header />
       <Banner />
-      <div className="container mx-auto px-4 lg:grid lg:grid-cols-4 lg:gap-5">
+      <div className="container mx-auto px-4 lg:grid lg:grid-cols-4">
         <div className="hidden lg:block">
           <SearchCard />
           <Advert />
           <MailSignUp />
         </div>
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-3 lg:pl-5">
           <CallToAction />
           <ProductDisplay />
 
-          <div className="flex items-center px-3">
+          <div className="flex items-center px-3 my-10">
             <h4 className="w-full text-black font-Suez uppercase text-xl mb-1 inline-block">
               More from <span className="text-primary">Boots</span>
             </h4>
             <div className="w-full h-[2px] bg-darkGrey"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-10">
             {products.map((product) => (
               <ProductCard
                 key={product.id}
                 image={product.image}
                 title={product.title}
                 store={product.store}
+                discount={product.discount}
+                inventory={product.inventory}
                 price={product.price}
               />
             ))}
