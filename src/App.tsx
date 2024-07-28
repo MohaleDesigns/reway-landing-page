@@ -19,6 +19,12 @@ import Product4 from "./assets/images/products/small-product-4.png";
 import Product5 from "./assets/images/products/small-product-5.png";
 
 function App() {
+  const [showLeftSection, setShowLeftSection] = useState(true);
+
+  const toggleLeftSection = () => {
+    setShowLeftSection(!showLeftSection);
+  };
+
   const products = [
     {
       id: 0,
@@ -72,12 +78,18 @@ function App() {
       <Header />
       <Banner />
       <div className="container mx-auto px-4 lg:grid lg:grid-cols-4">
-        <div className="hidden lg:block">
-          <SearchCard />
-          <Advert />
-          <MailSignUp />
-        </div>
-        <div className="lg:col-span-3 lg:pl-5">
+        {showLeftSection && (
+          <div className="hidden lg:block">
+            <SearchCard toggleLeftSection={toggleLeftSection} />
+            <Advert />
+            <MailSignUp />
+          </div>
+        )}
+        <div
+          className={
+            showLeftSection ? "lg:col-span-3 lg:pl-5" : "lg:col-span-4"
+          }
+        >
           <CallToAction />
           <ProductDisplay />
 

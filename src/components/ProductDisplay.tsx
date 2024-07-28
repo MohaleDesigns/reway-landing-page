@@ -40,6 +40,7 @@ function ProductDisplay() {
               />
               <p className="text-white font-PTSans text-xs">-40% Off</p>
             </div>
+            {/* arrow  */}
             <div className="absolute top-1/2 left-0 right-0 w-full flex items-center justify-between">
               <HiOutlineChevronLeft
                 className="arrows"
@@ -55,6 +56,13 @@ function ProductDisplay() {
               className="object-cover w-full h-[600px]"
               alt="boot one"
             />
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 mx-auto flex gap-1 rounded-full p-1 bg-black/10 w-16">
+              <div className="h-2 w-2 rounded-full bg-white/30"></div>
+              <div className="h-2 w-2 rounded-full bg-white/30"></div>
+              <div className="h-2 w-2 rounded-full bg-white"></div>
+              <div className="h-2 w-2 rounded-full bg-white/30"></div>
+              <div className="h-2 w-2 rounded-full bg-white/30"></div>
+            </div>
           </div>
           {/* small photos */}
           <div className="grid grid-cols-4 gap-[10px] mt-2">

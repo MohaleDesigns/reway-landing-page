@@ -6,14 +6,8 @@ import { GrSearch } from "react-icons/gr";
 import { IoMdArrowDropdown } from "react-icons/io";
 import "../index.css";
 
-function SearchCard() {
-  const [price, setPrice] = useState(50); // Default value can be adjusted
-  const [values, setValues] = useState([20, 4000]); // Default min and max values
-
-  // Handle changes to the range input
-  const handleChange = (event) => {
-    setPrice(event.target.value);
-  };
+function SearchCard({ toggleLeftSection }) {
+  const [values, setValues] = useState([20, 4000]);
 
   const options = [
     { value: "red", label: "Red" },
@@ -31,10 +25,11 @@ function SearchCard() {
   return (
     <div className="border-4 border-primary cursor-pointer">
       <div className="flex bg-primary p-2">
-        <div>
+        <div onClick={toggleLeftSection}>
           <GoChevronLeft
             className="hover-effect rounded-md mr-1"
             style={{ color: "#ffffff", fontSize: "30px" }}
+            onClick={toggleLeftSection}
           />
         </div>
         <div>
@@ -69,9 +64,10 @@ function SearchCard() {
               styles={{
                 control: (provided) => ({
                   ...provided,
-                  borderColor: "#d1d5db",
+                  borderColor: "rgba(130,130,130, 0.5)",
+                  borderWidth: "2px",
                   borderRadius: "0.375rem",
-                  padding: "0.5rem",
+                  padding: "2.5px 0",
                 }),
                 multiValue: (provided) => ({
                   ...provided,
@@ -81,6 +77,7 @@ function SearchCard() {
                 multiValueLabel: (provided) => ({
                   ...provided,
                   color: "#374151",
+                  fontWeight: "bold",
                 }),
                 multiValueRemove: (provided) => ({
                   ...provided,
@@ -92,7 +89,7 @@ function SearchCard() {
                 }),
               }}
             />
-            <IoMdArrowDropdown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-darkGrey/50 text-2xl pointer-events-none" />
+            {/* <IoMdArrowDropdown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-darkGrey/50 text-2xl pointer-events-none" /> */}
           </div>
         </div>
 
