@@ -1,10 +1,11 @@
+import img from "../assets/images/cta.png";
 import "../index.css";
 
 function CallToAction() {
   return (
     <div
       style={{
-        backgroundImage: "url('../src/assets/images/cta.png')",
+        backgroundImage: `url(${img})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

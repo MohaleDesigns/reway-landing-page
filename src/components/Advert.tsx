@@ -1,4 +1,4 @@
-import img from "../src/assets/images/advertBanner.png";
+import img from "../assets/images/advertBanner.png";
 
 function Advert() {
   return (
