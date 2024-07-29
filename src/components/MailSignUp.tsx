@@ -10,7 +10,7 @@ function MailSignUp() {
         </p>
         <div className="mb-3 flex items-center flex-col justify-center">
           <BiEnvelope style={{ color: "#ffffff", fontSize: "40px" }} />
-          <h4 className="text-white font-Suez uppercase text-base">
+          <h4 className="text-white font-Suez uppercase text-base text-center">
             Sign up to our mailing list!
           </h4>
         </div>

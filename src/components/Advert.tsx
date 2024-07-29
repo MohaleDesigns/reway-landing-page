@@ -1,9 +1,11 @@
+import img from "../src/assets/images/advertBanner.png";
+
 function Advert() {
   return (
     <div className="p-5">
       <div
         style={{
-          backgroundImage: "url('../src/assets/images/advertBanner.png')",
+          backgroundImage: `url(${img})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
