@@ -11,7 +11,7 @@ import smallImageSix from "../assets/images/products/big-product-6.png";
 
 function ProductDisplay() {
   return (
-    <div className="mb-2 p-5">
+    <div className="mb-2">
       {/* links  */}
       <div className="flex items-center gap-1 mb-4">
         <p className="font-PTSans text-primary hover:underline hover:cursor-pointer">
