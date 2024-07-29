@@ -72,9 +72,9 @@ function Header() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-0 left-0 w-full h-full bg-white shadow-md p-5 z-50 transition-all delay-150 duration-100 ease-in-out">
+        <div className="flex flex-col items-center justify-center lg:hidden absolute top-0 left-0 w-full h-full bg-white shadow-md p-5 z-50 transition-all delay-150 duration-100 ease-in-out">
           <CiSquareRemove
-            className="hover-effect hover:text-primary rounded-md float-right"
+            className="absolute top-4 right-3 hover-effect hover:text-primary rounded-md float-right"
             style={{ color: "#828282", fontSize: "40px" }}
             onClick={toggleMobileMenu}
           />
@@ -95,7 +95,7 @@ function Header() {
               </li>
             </ul>
 
-            <div className="flex flex-col gap-10 mt-10">
+            <div className="flex flex-col gap-10 mt-20">
               <div className="flex gap-5 justify-center">
                 <GoStar
                   className="hover-effect hover:text-primary rounded-md"
