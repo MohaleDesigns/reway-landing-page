@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Select from "react-select";
 import { Range, getTrackBackground } from "react-range";
 import { GoChevronLeft } from "react-icons/go";
@@ -6,7 +6,11 @@ import { GrSearch } from "react-icons/gr";
 import { IoMdArrowDropdown } from "react-icons/io";
 import "../index.css";
 
-function SearchCard({ toggleLeftSection }) {
+interface Props {
+  toggleLeftSection: () => void;
+}
+
+function SearchCard({ toggleLeftSection }: Props) {
   const [values, setValues] = useState([20, 4000]);
 
   const options = [

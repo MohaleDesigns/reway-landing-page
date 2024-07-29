@@ -1,4 +1,3 @@
-import React from "react";
 import { BiEnvelope } from "react-icons/bi";
 import "../index.css";
 

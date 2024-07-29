@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "../assets/logo.svg";
 import "../index.css";
 import { SlPresent } from "react-icons/sl";

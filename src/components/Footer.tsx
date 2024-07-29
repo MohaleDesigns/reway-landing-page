@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import "../index.css";

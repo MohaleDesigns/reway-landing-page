@@ -1,4 +1,3 @@
-import React from "react";
 import { PiStorefront } from "react-icons/pi";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { GoTag } from "react-icons/go";

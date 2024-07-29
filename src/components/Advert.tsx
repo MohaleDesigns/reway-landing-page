@@ -1,5 +1,3 @@
-import React from "react";
-
 function Advert() {
   return (
     <div className="p-5">
